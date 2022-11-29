@@ -1,0 +1,47 @@
+/*Третя секція "Чим ми займаємось"*/
+.works {
+    background-color: var(--white-color);
+    @media screen and (max-width:1200px) {
+      display: none;
+    }
+  }
+  .text-portfolio-mail {
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--button-portfolio-color);
+    
+  }
+  .menu-portfolio {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+  }
+  
+  .menu-portfolio-box {
+    position: relative;
+  }
+  
+  .portfolio-options {
+    /* position and block*/
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    /* text-style */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }

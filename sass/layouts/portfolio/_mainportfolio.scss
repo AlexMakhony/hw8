@@ -1,0 +1,139 @@
+/* Portfolio Page*/
+.main-section {
+    background-color: var(--white-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+  }
+  /* UL with buttons*/
+  .buttons-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    max-width: 326px;
+    list-style-type: none;
+    gap: 8px;
+    @include tablet {
+       justify-content: center;
+       max-width: 1200px;
+    }
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+  .button-portfolio {
+    padding: 6px 24px 6px 24px;
+    margin-bottom: 7px;
+    font-style: normal;
+    // margin-right: 8px;
+    background-color: var(--our-team-bg);
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.71;
+    text-align: center;
+    color: var(--button-portfolio-color);
+    border-radius: 4px;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+      color: var(--white-color);
+      background-color: var(--blue-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      border: none;
+    }
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+  
+  .lists-blocks {
+    width: 100%;
+    @include tablet {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
+
+  .link-blocks {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    &:hover .text-overlay-portfolio {
+      transform: translateY(0);
+    }
+
+    .img-portfolio {
+      width: 100%;
+    }
+  }
+  /* ---------Overlay START----------- */
+  
+  .overlay-relativ {
+  position: relative;
+  overflow: hidden;
+  }
+  .text-overlay-portfolio {
+    /* position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    width: 100%;
+    height: 100%;
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* text decore */
+    padding: 63px 24px 63px 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+    /* decore end */
+  }
+  /* ------------Overlay END----------- */
+  .pictures-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 30px;
+  }
+  .options-discription {
+    flex-grow: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--portfolio-border);
+    border-bottom: 1px solid var(--portfolio-border);
+    border-left: 1px solid var(--portfolio-border);
+  }
+
+  .name-picture-section {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--brand-color);
+  }
+  .caption-picture-section {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    color: var(--gray-color);
+  }
